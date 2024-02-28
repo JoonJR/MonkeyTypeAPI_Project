@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="apiManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="databaseManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\imgui-master\imgui.cpp">
+      <Filter>ImGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\imgui-master\imgui_demo.cpp">
+      <Filter>ImGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\imgui-master\imgui_draw.cpp">
+      <Filter>ImGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\imgui-master\imgui_tables.cpp">
+      <Filter>ImGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\imgui-master\imgui_widgets.cpp">
+      <Filter>ImGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\imgui-master\backends\imgui_impl_dx11.cpp">
+      <Filter>ImGUI\Backends</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\imgui-master\backends\imgui_impl_win32.cpp">
+      <Filter>ImGUI\Backends</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="databaseManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="apiManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="typingTestResults.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\imgui-master\imgui.h">
+      <Filter>ImGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\imgui-master\backends\imgui_impl_dx11.h">
+      <Filter>ImGUI\Backends</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\imgui-master\backends\imgui_impl_win32.h">
+      <Filter>ImGUI\Backends</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{710a9383-a80a-421a-8e65-9a9739d1d03f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{76d22e92-6f22-42e3-8706-e15a4d1c6e31}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{a652ee59-0460-4f40-974c-c662c44bab11}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ImGUI">
+      <UniqueIdentifier>{f0676d1d-2667-4847-a567-b24eff961d27}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ImGUI\Backends">
+      <UniqueIdentifier>{f6239910-9197-4aeb-ab4f-9cbe6803129c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

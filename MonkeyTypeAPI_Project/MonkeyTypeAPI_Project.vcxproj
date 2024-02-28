@@ -74,6 +74,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <IncludePath>D:\Software\vcpkg\installed\x64-windows\include;$(IncludePath)</IncludePath>
     <LibraryPath>D:\Software\vcpkg\installed\x64-windows\lib;$(LibraryPath)</LibraryPath>
+    <IntDir>$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -109,7 +110,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>D:\Software\Curl\include\curl</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\c++ shit\Data&amp;Alg\MonkeyTypeAPI_Project\MonkeyTypeAPI_Project\libs\imgui-master;D:\c++ shit\Data&amp;Alg\MonkeyTypeAPI_Project\MonkeyTypeAPI_Project\libs\imgui-master\backends;D:\Software\Curl\include\curl</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -137,12 +138,22 @@
   <ItemGroup>
     <ClCompile Include="apiManager.cpp" />
     <ClCompile Include="databaseManager.cpp" />
+    <ClCompile Include="libs\imgui-master\backends\imgui_impl_dx11.cpp" />
+    <ClCompile Include="libs\imgui-master\backends\imgui_impl_win32.cpp" />
+    <ClCompile Include="libs\imgui-master\imgui.cpp" />
+    <ClCompile Include="libs\imgui-master\imgui_demo.cpp" />
+    <ClCompile Include="libs\imgui-master\imgui_draw.cpp" />
+    <ClCompile Include="libs\imgui-master\imgui_tables.cpp" />
+    <ClCompile Include="libs\imgui-master\imgui_widgets.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="test.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="apiManager.h" />
     <ClInclude Include="databaseManager.h" />
+    <ClInclude Include="libs\imgui-master\backends\imgui_impl_dx11.h" />
+    <ClInclude Include="libs\imgui-master\backends\imgui_impl_win32.h" />
+    <ClInclude Include="libs\imgui-master\imgui.h" />
     <ClInclude Include="typingTestResults.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
