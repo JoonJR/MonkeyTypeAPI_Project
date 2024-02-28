@@ -1,0 +1,21 @@
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Various IDEs
+.vs/
+*.user
+*.userprefs
+Debug/
+Release/
+*.opendb
+*.VC.db
+
+# Environment variables file
+.env
