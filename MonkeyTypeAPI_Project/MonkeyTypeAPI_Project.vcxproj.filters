@@ -7,32 +7,11 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="test.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="databaseManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="libs\imgui-master\imgui.cpp">
-      <Filter>ImGUI</Filter>
-    </ClCompile>
-    <ClCompile Include="libs\imgui-master\imgui_demo.cpp">
-      <Filter>ImGUI</Filter>
-    </ClCompile>
-    <ClCompile Include="libs\imgui-master\imgui_draw.cpp">
-      <Filter>ImGUI</Filter>
-    </ClCompile>
-    <ClCompile Include="libs\imgui-master\imgui_tables.cpp">
-      <Filter>ImGUI</Filter>
-    </ClCompile>
-    <ClCompile Include="libs\imgui-master\imgui_widgets.cpp">
-      <Filter>ImGUI</Filter>
-    </ClCompile>
-    <ClCompile Include="libs\imgui-master\backends\imgui_impl_dx11.cpp">
-      <Filter>ImGUI\Backends</Filter>
-    </ClCompile>
-    <ClCompile Include="libs\imgui-master\backends\imgui_impl_win32.cpp">
-      <Filter>ImGUI\Backends</Filter>
+    <ClCompile Include="mainWin.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -45,14 +24,8 @@
     <ClInclude Include="typingTestResults.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="libs\imgui-master\imgui.h">
-      <Filter>ImGUI</Filter>
-    </ClInclude>
-    <ClInclude Include="libs\imgui-master\backends\imgui_impl_dx11.h">
-      <Filter>ImGUI\Backends</Filter>
-    </ClInclude>
-    <ClInclude Include="libs\imgui-master\backends\imgui_impl_win32.h">
-      <Filter>ImGUI\Backends</Filter>
+    <ClInclude Include="plotData.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -64,12 +37,6 @@
     </Filter>
     <Filter Include="Resource Files">
       <UniqueIdentifier>{a652ee59-0460-4f40-974c-c662c44bab11}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ImGUI">
-      <UniqueIdentifier>{f0676d1d-2667-4847-a567-b24eff961d27}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ImGUI\Backends">
-      <UniqueIdentifier>{f6239910-9197-4aeb-ab4f-9cbe6803129c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

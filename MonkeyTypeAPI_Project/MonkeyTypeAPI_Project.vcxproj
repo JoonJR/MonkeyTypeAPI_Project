@@ -110,10 +110,10 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>D:\c++ shit\Data&amp;Alg\MonkeyTypeAPI_Project\MonkeyTypeAPI_Project\libs\imgui-master;D:\c++ shit\Data&amp;Alg\MonkeyTypeAPI_Project\MonkeyTypeAPI_Project\libs\imgui-master\backends;D:\Software\Curl\include\curl</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Software\Curl\include\curl</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>libcurl.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>D:\Software\vcpkg\installed\x64-windows\bin\libcurl.dll;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
@@ -138,22 +138,13 @@
   <ItemGroup>
     <ClCompile Include="apiManager.cpp" />
     <ClCompile Include="databaseManager.cpp" />
-    <ClCompile Include="libs\imgui-master\backends\imgui_impl_dx11.cpp" />
-    <ClCompile Include="libs\imgui-master\backends\imgui_impl_win32.cpp" />
-    <ClCompile Include="libs\imgui-master\imgui.cpp" />
-    <ClCompile Include="libs\imgui-master\imgui_demo.cpp" />
-    <ClCompile Include="libs\imgui-master\imgui_draw.cpp" />
-    <ClCompile Include="libs\imgui-master\imgui_tables.cpp" />
-    <ClCompile Include="libs\imgui-master\imgui_widgets.cpp" />
+    <ClCompile Include="mainWin.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="test.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="apiManager.h" />
     <ClInclude Include="databaseManager.h" />
-    <ClInclude Include="libs\imgui-master\backends\imgui_impl_dx11.h" />
-    <ClInclude Include="libs\imgui-master\backends\imgui_impl_win32.h" />
-    <ClInclude Include="libs\imgui-master\imgui.h" />
+    <ClInclude Include="plotData.h" />
     <ClInclude Include="typingTestResults.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

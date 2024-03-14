@@ -3,8 +3,7 @@
 #include <iostream>
 #include <vector>
 using namespace std;
-
-int main() {
+/*int main() {
     APIManager apiManager;
     string jsonData = apiManager.fetchData(); // Fetch the JSON data from the API.
     auto jsonResponse = nlohmann::json::parse(jsonData); // Parse the JSON string into a JSON object.
@@ -13,6 +12,7 @@ int main() {
     if (jsonResponse.contains("message") && jsonResponse["message"] == "Result retrieved") {
         cout << jsonResponse << endl;
         // Extract the required data from the JSON response.
+         
         double wpm = jsonResponse["data"]["wpm"]; 
         double rawWpm = jsonResponse["data"]["rawWpm"];
         double accuracy = jsonResponse["data"]["acc"];
@@ -70,5 +70,5 @@ int main() {
 
     return 0;
 }
- 
+ */
 // sqlite3 monkeytype.db  SELECT* FROM TestResults;

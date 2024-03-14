@@ -29,6 +29,7 @@ vector<TypingTestResult> DatabaseManager::fetchResults() {
 	if (sqlite3_prepare_v2(db, sqlQuery, -1, &stmt, nullptr) == SQLITE_OK) {
 		while (sqlite3_step(stmt) == SQLITE_ROW) {
 			TypingTestResult result(
+				
 				sqlite3_column_double(stmt, 1), // WPM 
 				sqlite3_column_double(stmt, 2),	// RAWWPM
 				sqlite3_column_double(stmt, 3),	// Accuracy
@@ -119,14 +120,14 @@ bool DatabaseManager::resultExists(const TypingTestResult& result) {
 
 string DatabaseManager::formatTimestamp(long long milliseconds) {
 	// Convert milliseconds to seconds
-	auto seconds = std::chrono::seconds(milliseconds / 1000);
+	auto seconds = chrono::seconds(milliseconds / 1000);
 	auto milliseconds_remainder = milliseconds % 1000;
 
 	// Convert to time_t
-	std::time_t time = seconds.count();
+	time_t time = seconds.count();
 
 	// Prepare tm struct
-	std::tm gmtimeBuffer{};
+	tm gmtimeBuffer{};
 	// Use gmtime_s on Windows
 	gmtime_s(&gmtimeBuffer, &time);
 
@@ -134,8 +135,8 @@ string DatabaseManager::formatTimestamp(long long milliseconds) {
 
 	mktime(&gmtimeBuffer);
 	// Format the timestamp using the gmtimeBuffer
-	std::stringstream ss;
-	ss << std::put_time(&gmtimeBuffer, "%Y-%m-%d %H:%M:%S");
+	stringstream ss;
+	ss << put_time(&gmtimeBuffer, "%Y-%m-%d %H:%M:%S");
 
 	
 
