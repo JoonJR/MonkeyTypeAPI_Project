@@ -150,7 +150,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE, LPSTR, int nCmdShow) {
     plotStyle.Colors[ImPlotCol_Line] = ImVec4(0.529f, 0.16f, 1.0f, 1.00f);
     plotStyle.LineWeight = 2.0f;
     plotStyle.PlotPadding = ImVec2(0, 0); // Adjusts padding around the plot area
-    plotStyle.Colors[ImPlotCol_AxisGrid] = ImVec4(1.0f, 0.0f, 0.0f, 0.5f); // Red x axis
+    plotStyle.Colors[ImPlotCol_AxisGrid] = ImVec4(1.0f, 1.0f, 1.0f, 0.5f); // White Grid
     plotStyle.Colors[ImPlotCol_AxisBgHovered] = ImVec4(0.529f, 0.16f, 0.89f, 0.25f);
     plotStyle.Colors[ImPlotCol_AxisBgActive] = ImVec4(0.529f, 0.16f, 0.89f, 0.25f);
 
@@ -194,19 +194,42 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE, LPSTR, int nCmdShow) {
         ImGui_ImplWin32_NewFrame();
         ImGui::NewFrame();
         
-        // PLOTTING HERE --------------------------------------------------------------------------------------------------------
+        // PLOTTING HERE 
         PlotData plotData;
         
         // Load data from the database into the PlotData struct
         if (GetWPMDataFromDatabase(plotData)) {
 
             std::vector<float> runningAverages = plotData.calculateRunningAverage(plotData.wpms);
+            int totalDurationSeconds = plotData.getTotalTestDuration();
+            int minutes = totalDurationSeconds / 60;
+            int seconds = totalDurationSeconds % 60;
+            float bestWPM = plotData.getBestWPM();
+            float worstWPM = plotData.getWorstWPM();
+            float averageWPM = plotData.getAverageWPM();
+            float averageAccuracy = plotData.getAverageAccuracy();
 
             if (ImGui::Begin("WPM Chart")) {
-                // Use BeginPlot with title and no specific flags for axes
-                if (ImPlot::BeginPlot("WPM Over Time")) {
+                
+                if(ImGui::BeginChild("Time Display", ImVec2(1030, 50), true)) {
+                    ImGui::Indent(45.0f);
+                    ImGui::Text("Total Time Typed: %d minutes and %d seconds", minutes, seconds);
+                    ImGui::SameLine(); // Keep the next item on the same line
+                    ImGui::Text("| Best WPM: %.2f", bestWPM);
+                    ImGui::SameLine();
+                    ImGui::Text("| Worst WPM: %.2f", worstWPM);
+                    ImGui::SameLine();
+                    ImGui::Text("| Average WPM: %.2f", averageWPM);
+                    ImGui::SameLine();
+                    ImGui::Text("| Average Accuracy: %.2f", averageAccuracy);
+
+                }
+                ImGui::EndChild();
+
+                ImGui::Spacing(); // Add a little space between the child window and the plot.
+
+                if (ImPlot::BeginPlot("WPM Over Time", ImVec2(-1, 500))) {
                     
-                    // Assuming ids are unique and sorted, manually set x-axis ticks
                     std::vector<double> idTicks(plotData.ids.begin(), plotData.ids.end()); // Convert float to double for ImPlot
                     std::vector<std::string> idLabels(plotData.ids.size());
                     std::transform(plotData.ids.begin(), plotData.ids.end(), idLabels.begin(), [](float id) {
@@ -234,6 +257,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE, LPSTR, int nCmdShow) {
                   
                     // Plot dots for each data point
                     ImPlot::PushStyleVar(ImPlotStyleVar_Marker, ImPlotMarker_Circle);
+                    ImPlot::SetNextMarkerStyle(ImPlotMarker_Circle, 5.0f, ImVec4(1.0f, 1.0f, 1.0f, 1.0f), 1.0f, ImVec4(1.0f, 1.0f, 1.0f, 1.0f));
                     ImPlot::PlotScatter("Data Points", plotData.ids.data(), plotData.wpms.data(), static_cast<int>(plotData.wpms.size()));
 
                     // Tooltip for specific data points

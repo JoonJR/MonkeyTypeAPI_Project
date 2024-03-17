@@ -56,6 +56,30 @@ public:
         testDurations.clear();
     }
 
+    int getTotalTestDuration() const {
+        return std::accumulate(testDurations.begin(), testDurations.end(), 0);
+    }
+
+    float getBestWPM() const {
+        return *std::max_element(wpms.begin(), wpms.end());
+    }
+
+    float getWorstWPM() const {
+        return *std::min_element(wpms.begin(), wpms.end());
+    }
+
+    float getAverageWPM() const {
+        if (wpms.empty()) return 0;
+        float sum = std::accumulate(wpms.begin(), wpms.end(), 0.0f);
+        return sum / wpms.size();
+    }
+    
+    float getAverageAccuracy() const {
+        if (accuracies.empty()) return 0.0f;
+        float sum = std::accumulate(accuracies.begin(), accuracies.end(), 0.0f);
+        return sum / accuracies.size();
+    }
+
     float calculateAverageWPM(const std::vector<float>& wpms) {
         if (wpms.empty()) return 0.0f;
         float sum = std::accumulate(wpms.begin(), wpms.end(), 0.0f);
