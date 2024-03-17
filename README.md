@@ -45,11 +45,11 @@ vcpkg install nlohmann-json
 ```
 ### Step 3: Configure Visual Studio
 #### Include Directories
-Project Properties -> Configuration Properties -> VC++ Directioris -> Include Directories > include path to C:\path\to\vcpkg\installed\x64-windows\include
+Project Properties &rarr; Configuration Properties &rarr; VC++ Directioris &rarr; Include Directories &rarr; include path to C:\path\to\vcpkg\installed\x64-windows\include
 #### Library Directories
-Project Properties -> Configuration Properties -> Library Directories -> Add path to lib directory of cURL C:\path\to\vcpkg\installed\x64-windows\lib
+Project Properties &rarr; Configuration Properties &rarr; Library Directories &rarr; Add path to lib directory of cURL C:\path\to\vcpkg\installed\x64-windows\lib
 #### Additional Dependencies
-Project properties -> Linker -> Input -> Additional Dependencies -> add libcurl.lib to the list
+Project properties &rarr; Linker &rarr; Input &rarr; Additional Dependencies &rarr; add libcurl.lib to the list
 
 
 ## Usage
