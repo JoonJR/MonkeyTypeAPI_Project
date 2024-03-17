@@ -59,8 +59,8 @@ Project properties -> Linker -> Input -> Additional Dependencies -> add libcurl.
 Execute the compiled application. The graphical interface will launch, immediately beginning to fetch and display typing test data.
 
 ### Interacting with the Visualization
-*Hover over data points in the graph to see detailed metrics for specific tests.
-*Observe the running average line to gauge overall performance trends.
+- Hover over data points in the graph to see detailed metrics for specific tests.
+- Observe the running average line to gauge overall performance trends.
 
 ## Configuration 
 To connect to your MonkeyType account, set your API key in your environment variables under APEKEY. The application fetches data using this key.
