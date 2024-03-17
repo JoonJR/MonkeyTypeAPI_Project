@@ -2,7 +2,7 @@
 
 ## Overview
 The MonkeyType Performance Visualizer is a desktop application designed to fetch, display, and analyze typing test data over time. It visualizes metrics such as Words Per Minute (WPM), accuracy, and test duration, providing users with insights into their typing performance and progress.
-
+![Example Graph](MonkeyTypeAPI_Project/Images/MonkeyTypeProject.PNG)
 ## Features
 - **Real-time Data Fetching**: Automatically retrieves typing test data from the MonkeyType API every 5 seconds.
 - **Data Visualization**: Plots WPM and accuracy over time using an interactive graph.
