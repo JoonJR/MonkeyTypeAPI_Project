@@ -4,9 +4,6 @@
     <ClCompile Include="apiManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="databaseManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>

@@ -44,7 +44,7 @@ APIManager apiManager;
 static int LoadDataCallback(void* data, int argc, char** argv, char** azColName) {
     auto* plotData = reinterpret_cast<PlotData*>(data);
     if (argc == 13 && argv[0] && argv[1] && argv[2] && argv[3] && argv[4]) {
-        // Assuming argv[0] is ID, argv[1] is WPM, and argv[2] is RawWPM
+     
         // Convert ID, WPM, and RawWPM from string to float and add to the plot data vectors
         float id = static_cast<float>(atoi(argv[0]));
         float wpm = static_cast<float>(atof(argv[1]));
@@ -153,9 +153,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE, LPSTR, int nCmdShow) {
     plotStyle.Colors[ImPlotCol_AxisGrid] = ImVec4(1.0f, 1.0f, 1.0f, 0.5f); // White Grid
     plotStyle.Colors[ImPlotCol_AxisBgHovered] = ImVec4(0.529f, 0.16f, 0.89f, 0.25f);
     plotStyle.Colors[ImPlotCol_AxisBgActive] = ImVec4(0.529f, 0.16f, 0.89f, 0.25f);
-
-    //plotStyle.PlotMargin = ImVec2(5, 5); // Adjusts the margin around the plot
-   
+  
     ImGui_ImplWin32_Init(hwnd);
     ImGui_ImplDX11_Init(g_pd3dDevice, g_pd3dDeviceContext);
 

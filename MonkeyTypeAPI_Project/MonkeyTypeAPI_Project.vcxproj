@@ -139,7 +139,6 @@
     <ClCompile Include="apiManager.cpp" />
     <ClCompile Include="databaseManager.cpp" />
     <ClCompile Include="mainWin.cpp" />
-    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="apiManager.h" />
